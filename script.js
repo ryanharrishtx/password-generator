@@ -18,8 +18,22 @@ if (passwordLength >= 8 && passwordLength <= 128) {
     let includeUpperCase = confirm(`Would you like to include uppercase letters?`);
     let includeNumbers = confirm(`Would you like to include numbers?`);
     let includeSpecialCharacters = confirm(`Would you like to include special characters?`);
+// set up passwordCharacters variable to be an empty array
+let passwordCharacters = [];
+// if user chooses to include any of the below, then add the values inside of their respective arrays to passwordCharacters array
+  if (includeLowerCase) {
+    passwordCharacters += lowerCase;
+  }
+  if (includeUpperCase) {
+    passwordCharacters += upperCase;
+  }
+  if (includeNumbers) {
+    passwordCharacters += numbers;
+  }
+  if (includeSpecialCharacters) {
+    passwordCharacters += specialCharacters;
+  }
 }
-});
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -30,4 +44,4 @@ function writePassword() {
 }
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", writePassword)});
