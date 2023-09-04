@@ -33,6 +33,13 @@ let passwordCharacters = [];
   if (includeSpecialCharacters) {
     passwordCharacters += specialCharacters;
   }
+  
+// set password variable to be an empty string
+  let password = ``;
+// for loop that runs for the length of the password, and each time it runs, it adds a random character from the passwordCharacters array to the password variable
+  for (let i = 0; i < passwordLength; i++) {
+    password = password + passwordCharacters[Math.floor(Math.random() * passwordCharacters.length)];
+  }
 }
 // Write password to the #password input
 function writePassword() {
