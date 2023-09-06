@@ -35,6 +35,7 @@ if (passwordLength >= 8 && passwordLength <= 128) {
   if (includeSpecialCharacters) {
     passwordCharacters += specialCharacters;
   }
+//   if user does not choose any of the above, then alert them to choose at least one character type and run the start function again
   if (!includeLowerCase && !includeUpperCase && !includeNumbers && !includeSpecialCharacters) {
     alert(`Please choose at least one character type.`);
     start();
@@ -51,5 +52,6 @@ if (passwordLength >= 8 && passwordLength <= 128) {
 // if user does not choose a password length between 8 and 128 characters, then alert them to choose a password length between 8 and 128 characters
 } else {
   alert(`Please choose a password length between 8 and 128 characters.`);
+  start();
 }
 });
